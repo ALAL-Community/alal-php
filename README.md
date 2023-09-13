@@ -30,7 +30,7 @@ $options = new Options($env);
 $AlalSdk = new AlalSdk($apikey, $options);
 ```
 
-### Example
+<!-- ### Example
 ```
 $response = $AlalSdk->addresses()->generateUsdtAddress('TRX', 'hello@gmail.com');
-```
+``` -->
