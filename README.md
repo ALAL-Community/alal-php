@@ -16,7 +16,7 @@ Generate an API KEY from the <a href="https://pro.saalal.com/login" target="_bla
 
 ### Setup
 
-```
+```php
 <?php
 include "vendor/autoload.php";
 
