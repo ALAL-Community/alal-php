@@ -37,7 +37,7 @@ $response = $AlalSdk->addresses()->generateUsdtAddress('TRX', 'hello@gmail.com')
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/ALAL-Community/alal-node](https://github.com/ALAL-Community/alal-node). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct. Simply create a new branch and raise a Pull Request, we would review and merge.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/ALAL-Community/alal-node](https://github.com/ALAL-Community/alal-php). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct. Simply create a new branch and raise a Pull Request, we would review and merge.
 
 ## License
 
