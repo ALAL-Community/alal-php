@@ -30,10 +30,12 @@ $options = new Options($env);
 $AlalSdk = new AlalSdk($apikey, $options);
 ```
 
-<!-- ### Example
-```
-$response = $AlalSdk->addresses()->generateUsdtAddress('TRX', 'hello@gmail.com');
-``` -->
+### Example
+
+```php
+    $showCard = $AlalSdk->cards()->showCard('792c6cf2-f5cf-46c8-bf8c-699a9028010e');
+    $createCard = $AlalSdk->cards()->createCard('visa', 'virtual', 'd282e4a6-1fb6-4827-a6ae-a780263287d7')
+``` 
 
 ## Contributing
 
