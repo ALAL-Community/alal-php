@@ -18,7 +18,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "php-http/discovery": false
+            "php-http/discovery": false,
+            "pestphp/pest-plugin": true
         }
     },
     "require": {
@@ -28,13 +29,16 @@
         "php-http/guzzle7-adapter": "^v1.0",
         "psr/http-client": "^1.0",
         "psr/http-factory": "^1.0",
-        "symfony/options-resolver": "^5.2"
+        "symfony/options-resolver": "^5.2",
+        "phpunit/phpunit": "9.6.12",
+        "phpunit/php-file-iterator": "^3.0.5"
     },
     "require-dev": {
         "laminas/laminas-diactoros": "^2.4",
+        "mockery/mockery": "2.0.x-dev",
+        "pestphp/pest": "1.x-dev",
         "php-http/curl-client": "^2.1",
         "php-http/mock-client": "^1.4",
-        "phpunit/phpunit": "^10.4",
         "symfony/var-dumper": "^5.1"
     }
 }
