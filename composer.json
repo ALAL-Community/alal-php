@@ -16,7 +16,10 @@
     ],
     "minimum-stability": "dev",
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
     },
     "require": {
         "php": "^8.1",
@@ -31,7 +34,7 @@
         "laminas/laminas-diactoros": "^2.4",
         "php-http/curl-client": "^2.1",
         "php-http/mock-client": "^1.4",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10.4",
         "symfony/var-dumper": "^5.1"
     }
 }
