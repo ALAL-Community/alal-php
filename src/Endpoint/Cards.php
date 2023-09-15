@@ -24,7 +24,7 @@ final class Cards
         return ResponseMediator::getContent($this->sdk->getHttpClient()->get("$this->baseUri?page=$page"));
     }
 
-    public function showCard( string $reference ): array 
+    public function showCard( string $reference = null ): array 
     {
         return ResponseMediator::getContent($this->sdk->getHttpClient()->get("$this->baseUri/{$reference}")); 
     }

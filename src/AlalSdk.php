@@ -5,9 +5,12 @@ namespace Alal\Client;
 
 use Alal\Client\ClientBuilder;
 use Alal\Client\Endpoint\Cards;
-use Alal\Client\Endpoint\CardUsers;
 use Alal\Client\Endpoint\Disputes;
+use Alal\Client\Endpoint\CardUsers;
 use Alal\Client\Endpoint\Transactions;
+use Http\Client\Common\Plugin\BaseUriPlugin;
+use Http\Client\Common\HttpMethodsClientInterface;
+use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 
 final class AlalSdk
 {
