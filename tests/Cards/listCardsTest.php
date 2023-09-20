@@ -17,9 +17,9 @@ it('it should list cards with a valid page number', function () {
 
     $alalSdkMock->shouldReceive('listCards')
     ->with(1)
-    ->andReturn(json_encode(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued']]));
+    ->andReturn(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued'], "message" => "ok", "statusCode" => "200", "meta" => [ "current_page" => "1", "from" => "1", "last_page" => "1", "per_page" => "20", "to" => "17", "total" => "17"]]);
 
     $result =  $alalSdkMock->listCards(1);
     
-    expect($result)->toBe(json_encode(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued']]));
+    expect($result)->toBe(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued'], "message" => "ok", "statusCode" => "200", "meta" => [ "current_page" => "1", "from" => "1", "last_page" => "1", "per_page" => "20", "to" => "17", "total" => "17"]]);
 });

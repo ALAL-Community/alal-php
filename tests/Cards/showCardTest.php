@@ -15,10 +15,10 @@ it('shoul show card by reference', function() {
 
     $alalSdkMock->shouldReceive('showCards')
     ->with('792c6cf2-f5cf-46c8-bf8c-699a9028010e')
-    ->andReturn(json_encode(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued']]));
+    ->andReturn(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued'], "message" => "ok", "statusCode" => "200"]);
 
     $result =  $alalSdkMock->showCards('792c6cf2-f5cf-46c8-bf8c-699a9028010e');
     
-    expect($result)->toBe(json_encode(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued']]));
+    expect($result)->toBe(['data' => ['1000', 'physical', 'Visa', '1214', '792c6cf2-f5cf-46c8-bf8c-699a9028010e', 'issued'], "message" => "ok", "statusCode" => "200"]);
 
 }); 

@@ -17,11 +17,11 @@ it('should create new card', function() {
 
     $alalSdkMock->shouldReceive('createCards')
     ->with(CardBrand::visa, 'd282e4a6-1fb6-4827-a6ae-a780263287d7', CardType::virtual)
-    ->andReturn(json_encode(['data' => ['integer', 'Visa', 'virtual', 'issuing', 'd282e4a6-1fb6-4827-a6ae-a780263287d7']]));
+    ->andReturn(['data' => ['integer', 'Visa', 'virtual', 'issuing', 'd282e4a6-1fb6-4827-a6ae-a780263287d7'], "message" => "Card currently being generated", "statusCode" => "200"]);
 
     $result =  $alalSdkMock->createCards(CardBrand::visa, 'd282e4a6-1fb6-4827-a6ae-a780263287d7', CardType::virtual);
 
-    expect($result)->toBe(json_encode(['data' => ['integer', 'Visa', 'virtual', 'issuing', 'd282e4a6-1fb6-4827-a6ae-a780263287d7']]));
+    expect($result)->toBe(['data' => ['integer', 'Visa', 'virtual', 'issuing', 'd282e4a6-1fb6-4827-a6ae-a780263287d7'], "message" => "Card currently being generated", "statusCode" => "200"]);
     
 
 });

@@ -17,11 +17,11 @@ it('should create new card', function() {
 
     $alalSdkMock->shouldReceive('getAccessToken')
     ->with('style.css', 'd282e4a6-1fb6-4827-a6ae-a780263287d7')
-    ->andReturn(json_encode(['data' => ['N72VeyZQ8dmn3a0Wk0blu2a1pjFjdcNOx2Ec5bm39pFGa33gGu', 'https://sandbox.saalal.com/embedded-card-reveal/test_Q347N1z2kHuUTlrUPoYR1rSsmkl1FbiY5GhN8TAwBtqdvqo1QB']]));
+    ->andReturn(['data' => ['N72VeyZQ8dmn3a0Wk0blu2a1pjFjdcNOx2Ec5bm39pFGa33gGu', 'https://sandbox.saalal.com/embedded-card-reveal/test_Q347N1z2kHuUTlrUPoYR1rSsmkl1FbiY5GhN8TAwBtqdvqo1QB'], "message" => "Access Token generated successfully", "statusCode" => "200"]);
 
     $result =  $alalSdkMock->getAccessToken('style.css', 'd282e4a6-1fb6-4827-a6ae-a780263287d7');
 
-    expect($result)->toBe(json_encode(['data' => ['N72VeyZQ8dmn3a0Wk0blu2a1pjFjdcNOx2Ec5bm39pFGa33gGu', 'https://sandbox.saalal.com/embedded-card-reveal/test_Q347N1z2kHuUTlrUPoYR1rSsmkl1FbiY5GhN8TAwBtqdvqo1QB']]));
+    expect($result)->toBe(['data' => ['N72VeyZQ8dmn3a0Wk0blu2a1pjFjdcNOx2Ec5bm39pFGa33gGu', 'https://sandbox.saalal.com/embedded-card-reveal/test_Q347N1z2kHuUTlrUPoYR1rSsmkl1FbiY5GhN8TAwBtqdvqo1QB'], "message" => "Access Token generated successfully", "statusCode" => "200"]);
     
 
 });
