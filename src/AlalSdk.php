@@ -9,10 +9,10 @@ use Alal\Client\Endpoint\Disputes;
 use Alal\Client\Endpoint\CardUsers;
 use Alal\Client\Endpoint\Transactions;
 use Http\Client\Common\Plugin\BaseUriPlugin;
-use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
+use Http\Client\Common\HttpMethodsClientInterface;
 
-final class AlalSdk
+class AlalSdk
 {
     private ClientBuilder $clientBuilder;
 

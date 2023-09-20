@@ -6,6 +6,7 @@ namespace Alal\Client\Endpoint;
 
 use Alal\Client\AlalSdk;
 use Alal\Client\Enums\CardType;
+use Alal\Client\Enums\CardBrand;
 use Alal\Client\HttpClient\Message\ResponseMediator;
 
 final class Cards
@@ -29,7 +30,7 @@ final class Cards
         return ResponseMediator::getContent($this->sdk->getHttpClient()->get("$this->baseUri/{$reference}")); 
     }
 
-    public function createCard( string $cardBrand, $cardUserReference, CardType $cardType ): array
+    public function createCard( CardBrand $cardBrand, string $cardUserReference, CardType $cardType ): array
     {
         return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create", [], json_encode(compact('cardBrand', 'cardType', 'cardUserReference')))); 
     }
