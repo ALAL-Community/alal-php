@@ -5,7 +5,7 @@ A PHP sdk to interact with Alal's API
 
 ### With Composer
 
-`composer require Alal/Alal-php`
+`composer require alal/alal-sdk`
 
 ## REQUIREMENTS
 - PHP 8.0+
