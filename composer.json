@@ -1,5 +1,5 @@
 {
-    "name": "kepsondiaz/alal-php",
+    "name": "alal/alal-sdk",
     "description": "Official PHP SDK to interact with Alal's API",
     "type": "library",
     "license": "MIT",
