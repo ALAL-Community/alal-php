@@ -27,8 +27,8 @@ final class Options
     {
         $uris = [
             'dev' => 'http://localhost:9080/api/v1',
-            'sandbox' => 'https://www.saalal.com',
-            'production' => 'https://www.api.saalal.com',
+            'sandbox' => 'https://api.sandbox.saalal.com/v1',
+            'production' => 'https://api.saalal.com/v1',
         ];
         $resolver->setDefaults(
             [
