@@ -30,9 +30,24 @@ final class Cards
         return ResponseMediator::getContent($this->sdk->getHttpClient()->get("$this->baseUri/{$reference}")); 
     }
 
-    public function createCard( CardBrand $cardBrand, string $cardUserReference, CardType $cardType ): array
+    public function createCard( CardBrand $card_brand, string $card_user_reference, CardType $card_type ): array
     {
-        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create", [], json_encode(compact('cardBrand', 'cardType', 'cardUserReference')))); 
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create", [], json_encode(compact('card_brand', 'card_type', 'card_user_reference')))); 
+    }
+
+    public function freezeCard(string $reference): array
+    {
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/freeze", [], json_encode(compact('reference'))));
+    }
+
+    public function unFreezeCard(string $reference): array
+    {
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/unfreeze", [], json_encode(compact('reference'))));
+    }
+
+    public function linkCard(string $reference, $card_user_reference): array
+    {
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/link", [], json_encode(compact('reference', 'card_user_reference'))));
     }
 
     public function getAccessToken( string $css_url, $reference ): array
