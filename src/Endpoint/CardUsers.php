@@ -28,8 +28,13 @@ final class CardUsers
         return ResponseMediator::getContent($this->sdk->getHttpClient()->get("$this->baseUri/{$reference}")); 
     }
 
-    public function createCardUser( array $data ): array
+    public function createCardUser(string $first_name, string $last_name, string $address, string $phone, string $email, string $id_no, string $selfie_image, string $id_image, string $back_id_image): array
     {
-        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create", [], json_encode($data))); 
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create", [], json_encode(compact('first_name', 'last_name', 'address', 'phone', 'email', 'id_no', 'selfie_image', 'id_image', 'back_id_image')))); 
+    }
+
+    public function resubmitCardUser(string $card_user_reference, string $first_name, string $last_name, string $address, string $phone, string $email, string $id_no, string $selfie_image, string $id_image, string $back_id_image): array
+    {
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/resubmit", [], json_encode(compact('card_user_reference', 'first_name', 'last_name', 'address', 'phone', 'email', 'id_no', 'selfie_image', 'id_image', 'back_id_image')))); 
     }
 }
