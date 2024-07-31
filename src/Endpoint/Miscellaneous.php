@@ -20,7 +20,7 @@ final class CardUsers
         $this->baseUri = '/phone/verify';
     }
 
-    public function miscellaneous(string $phone, CountryCode $country_code): array
+    public function phoneVerification(string $phone, CountryCode $country_code): array
     {
         return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri", [], json_encode(compact('phone', 'country_code'))));
     }
