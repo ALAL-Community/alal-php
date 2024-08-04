@@ -10,7 +10,7 @@ use Alal\Client\Attribut\CustomerAttribut;
 use Alal\Client\HttpClient\Message\ResponseMediator;
 
 
-final class Account
+final class Disburse
 {
     private AlalSdk $sdk;
     private string $baseUri;

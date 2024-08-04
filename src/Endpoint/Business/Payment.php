@@ -9,7 +9,7 @@ use Alal\Client\Enums\WalletNetwork;
 use Alal\Client\Attribut\CustomerAttribut;
 use Alal\Client\HttpClient\Message\ResponseMediator;
 
-final class Account
+final class Payments
 {
     private AlalSdk $sdk;
     private string $baseUri;
