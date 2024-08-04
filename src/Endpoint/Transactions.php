@@ -46,9 +46,9 @@ final class Transactions
         return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create/card-to-wallet", [], json_encode(compact('amount', 'card_reference', 'phone', 'network')))); 
     }
 
-    public function createWalletToCard( int $amount, string $card_reference, string $phone, WalletNetwork $network): array
+    public function createWalletToCard( int $amount, string $card_reference, string $phone, WalletNetwork $network, string $code = null): array
     {
-        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create/wallet-to-card", [], json_encode(compact('amount', 'card_reference', 'phone', 'network')))); 
+        return ResponseMediator::getContent($this->sdk->getHttpClient()->post("$this->baseUri/create/wallet-to-card", [], json_encode(compact('amount', 'card_reference', 'phone', 'network', 'code')))); 
     }
 
 }
