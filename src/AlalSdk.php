@@ -8,9 +8,12 @@ use Alal\Client\Endpoint\Cards;
 use Alal\Client\Endpoint\Disputes;
 use Alal\Client\Endpoint\CardUsers;
 use Alal\Client\Endpoint\Transactions;
+use Alal\Client\Endpoint\Business\Account;
+use Alal\Client\Endpoint\Business\Disburse;
+use Alal\Client\Endpoint\Business\Payments;
 use Http\Client\Common\Plugin\BaseUriPlugin;
-use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Client\Common\HttpMethodsClientInterface;
+use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 
 class AlalSdk
 {
@@ -56,5 +59,20 @@ class AlalSdk
     public function transactions(): Transactions
     {
         return new Endpoint\Transactions($this); 
+    }
+
+    public function accounts(): Account
+    {
+        return new Endpoint\Business\Account($this); 
+    }
+
+    public function disburse(): Disburse
+    {
+        return new Endpoint\Business\Disburse($this);
+    }
+
+    public function payments(): Payments
+    {
+        return new Endpoint\Business\Payments($this);
     }
 }
